@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.qut.mapper.StuMapper">
+	
+	<insert id="addStu" parameterType="com.qut.pojo.Student">
+		insert into student values(null,#{stuNo},#{stuPwd},#{stuName},#{stuMajor},#{stuGrade})
+	</insert>
+	<!--  <if test="stuNo!=null">stuNo=#{stuNo},</if>-->
+	<update id="updStu" parameterType="com.qut.pojo.Student">
+		update student 
+		<set>
+		
+		<if test="stuName!=null">stuName=#{stuName},</if>
+		<if test="stuMajor!=null">stuMajor=#{stuMajor},</if>
+		<if test="stuGrade!=null">stuGrade=#{stuGrade},</if>
+		<if test="stuPwd!=null">stuPwd=#{stuPwd}</if>
+		</set>
+		where stuId=#{stuId}
+	</update>
+	<delete id="delStuById" parameterType="int">
+		delete from student where stuId=#{stuId}
+	</delete>
+	<select id="findStu" parameterType="com.qut.pojo.Student"
+		resultType="com.qut.pojo.Student"
+	>
+		select * from student where stuNo=#{stuNo} and stuPwd=#{stuPwd}
+	</select>
+	
+	
+	<select id="selectStu" resultType="com.qut.pojo.Student">
+		select * from student ;
+	</select>
+	<select id="findStuById" parameterType="int" resultType="com.qut.pojo.Student">
+		select * from student where stuId=#{stuId}
+	</select>
+	
+	
+	
+</mapper>
+
+

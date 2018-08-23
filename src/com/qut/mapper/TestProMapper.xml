@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.qut.mapper.TestProMapper">
+
+	<insert id="addTp" parameterType="com.qut.pojo.TestPro">
+		insert into testproRela values(null,#{tpTestid},#{tpProid})
+	</insert>
+	<select id="findProByTestid" parameterType="int" resultType="int">
+		select tpProid from testproRela where tpTestid=#{testId};
+	</select>
+	
+
+
+
+
+
+
+
+
+
+
+
+</mapper>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.qut.mapper.TestMapper">
+
+	<insert id="addTest" parameterType="com.qut.pojo.Test" >
+		insert into test values (null,#{testName},#{testMajor},#{testCoe},
+		#{testNum},#{testScore},#{testDetail},#{testTeaid},null)
+	</insert>
+
+	<delete id="delTestById" parameterType="int">
+		delete from test where testId=#{testId}
+	</delete>
+	<select id="selectTestByTeaid" parameterType="int" resultType="com.qut.pojo.Test">
+		select * from test where testTeaid=#{teaId};
+	</select>
+	<select id="findTestById" parameterType="int" resultType="com.qut.pojo.Test">
+		select * from test where testId=#{testId};
+	</select>
+	<select id="findLastTest" resultType="com.qut.pojo.Test">
+		select * from test order by testId desc limit 1;
+	</select>
+	<select id="findTestByCond"  parameterType="com.qut.pojo.Test" resultType="com.qut.pojo.Test">
+		select * from test where testTeaid=#{testTeaid} and testCoe=#{testCoe};
+	</select>
+	<select id="selTestById" parameterType="int" resultType="com.qut.pojo.Test">
+		select * from test where testId=#{testId};
+	</select>
+
+
+
+
+
+
+</mapper>
