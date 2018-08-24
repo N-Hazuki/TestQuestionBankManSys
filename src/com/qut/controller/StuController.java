@@ -30,7 +30,7 @@ public class StuController {
 		return view;
 	}
 	
-	@RequestMapping("/updStu")
+	@RequestMapping("/updStu")//修改
 	public ModelAndView updStu(Student stu){
 		int res = stuService.updStu(stu);
 		ModelAndView view = new ModelAndView();

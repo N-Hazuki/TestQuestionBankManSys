@@ -28,7 +28,7 @@ public class UserController {
 	private AdminService adminService;
 	
 	
-	@RequestMapping("/User.action")
+	@RequestMapping("/User.action")//对应前端JSP页面form表单中的action名称
 	public ModelAndView login(User u,String identity,HttpSession session){
 		ModelAndView view = new ModelAndView();
 		switch (identity){

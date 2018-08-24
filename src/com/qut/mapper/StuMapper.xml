@@ -9,6 +9,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="addStu" parameterType="com.qut.pojo.Student">
 		insert into student values(null,#{stuNo},#{stuPwd},#{stuName},#{stuMajor},#{stuGrade})
 	</insert>
+	
+	
 	<!--  <if test="stuNo!=null">stuNo=#{stuNo},</if>-->
 	<update id="updStu" parameterType="com.qut.pojo.Student">
 		update student 
@@ -21,14 +23,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</set>
 		where stuId=#{stuId}
 	</update>
+	
+	
+	
 	<delete id="delStuById" parameterType="int">
 		delete from student where stuId=#{stuId}
 	</delete>
+	
+	
+	
 	<select id="findStu" parameterType="com.qut.pojo.Student"
 		resultType="com.qut.pojo.Student"
 	>
 		select * from student where stuNo=#{stuNo} and stuPwd=#{stuPwd}
 	</select>
+	
+	
 	
 	
 	<select id="selectStu" resultType="com.qut.pojo.Student">
