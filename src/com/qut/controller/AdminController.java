@@ -21,10 +21,10 @@ public class AdminController {
 		Admin a = adminService.login(admin);
 		ModelAndView view = new ModelAndView();
 		if(a!=null){
-			//验证成功
+			//验证成功，跳转Admin_main.jsp页面
 			view.setViewName("Admin_main");
 		}else{
-			//验证失败
+			//验证失败，跳转到Login.jsp页面
 			view.setViewName("Login");
 		}
 		return view;
