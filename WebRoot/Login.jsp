@@ -69,6 +69,6 @@
 		var bdheight = ($(window).height() - $('#bd').height()) / 2 - 20;
 		$('#bd').css('padding-top', bdheight);
     });
-	$('select').select();
+	$('select').select();/*用法：http://www.w3school.com.cn/jquery/event_select.asp*/
 </script>
 </html>
