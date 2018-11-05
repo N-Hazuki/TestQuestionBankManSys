@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.qut.mapper.TeacherMapper">
+	<!--  
+	<resultMap type="com.qut.pojo.TeaList" id="selectMap">
+	
+		<collection property="listTea" ofType="com.qut.pojo.Teacher">
+				<id column="teaId" property="teaId"/>
+			<result column="teaNo" property="teaNo"/>
+			<result column="teaPwd" property="teaPwd"/>
+			<result column="teaName" property="teaName"/>
+			<result column="teaMajor" property="teaMajor"/>
+			<result column="teaMail" property="teaMail"/>
+		</collection>
+	</resultMap>
+	-->
+	
+	
+	<!-- 教师登录验证 -->
+	<select id="findTea" parameterType="com.qut.pojo.Teacher"
+		resultType="com.qut.pojo.Teacher"
+	>
+		select * from teacher 
+		where teaNo=#{teaNo} and teaPwd=#{teaPwd};
+	</select>
+	
+	<!-- 添加教师信息 -->
+	<insert id="addTea" parameterType="com.qut.pojo.Teacher">
+		insert into teacher values(null,#{teaNo},#{teaPwd},#{teaName},#{teaMajor},#{teaMail});
+	</insert>
+	
+	<!-- 删除某一个教师  -->
+	<delete id="delTeaById" parameterType="int">
+		delete from teacher where teaId=#{teaId}
+	</delete>
+	<!-- <if test="teaNo != null">teaNo=#{teaNo},</if> -->
+	<update id="updTea" parameterType="com.qut.pojo.Teacher">
+		update teacher 
+		<set>
+		
+		<if test="teaName != null">teaName=#{teaName},</if>
+		<if test="teaMajor != null">teaMajor=#{teaMajor},</if>
+		<if test="teaMail != null">teaMail=#{teaMail},</if>
+		<if test="teaPwd != null">teaPwd=#{teaPwd}</if>
+		</set>
+		where teaId=#{teaId}
+	</update>
+	<!--   parameterType="com.qut.pojo.Teacher" -->
+	<!-- 查询所有老师 -->
+	<select id="selectTea" resultType="com.qut.pojo.Teacher">
+		select * from teacher ;
+	</select>
+	<select id="findTeaById" parameterType="int" resultType="com.qut.pojo.Teacher">
+		select * from teacher where teaId=#{teaId};
+	</select>
+	
+	
+	
+</mapper>

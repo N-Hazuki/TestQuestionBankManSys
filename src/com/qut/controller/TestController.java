@@ -1,18 +1,16 @@
 package com.qut.controller;
 
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-
+import com.qut.pojo.Problem;
+import com.qut.pojo.Test;
+import com.qut.service.ProblemService;
+import com.qut.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.qut.pojo.Problem;
-import com.qut.pojo.Test;
-import com.qut.service.ProblemService;
-import com.qut.service.TestService;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class TestController {
