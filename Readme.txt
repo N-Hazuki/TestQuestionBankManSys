@@ -6,8 +6,8 @@
 ###库名：Proj_TestQuestionBankManSys_ssm  
 ###用户名：root  
 ###密码：admin  
-#登陆界面：  
-![image](https://github.com/yzqyfly/TestQuestionBankManSys/blob/master/img/0.PNG)  
+#登录界面：  
+![image](https://raw.githubusercontent.com/yzqyfly/TestQuestionBankManSys/master/img/0.PNG)  
 #学生界面：  
 ![image](https://raw.githubusercontent.com/yzqyfly/TestQuestionBankManSys/master/img/1.PNG)  
 #教师界面：  
