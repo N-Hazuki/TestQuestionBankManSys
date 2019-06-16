@@ -1,8 +1,16 @@
-1.JRE£ºJRE 1.8
-2.Database£ºMySQL 5.5 
-¿âÃû£ºexammana
-±àÂë¼¯£ºUTF-8
-Á¬½ÓÓÃ»§Ãû£ºroot
-Á¬½ÓÃÜÂë£ºadmin
-3.·şÎñÆ÷£ºApache Tomcat 8.0
-4.IDE£ºEclipse 4.8.0
+#è¯•é¢˜åº“ç®¡ç†ç³»ç»Ÿ(åŸºäºSSM)  
+##è¿è¡Œç¯å¢ƒï¼šJDK 1.8 + MySQL 5.7 +Tomcat 8.0.53  
+##ç¼–ç é›†ï¼šUTF-8  
+##IDEï¼šeclipse 4.8.0  
+##æ•°æ®åº“  
+###åº“åï¼šProj_TestQuestionBankManSys_ssm  
+###ç”¨æˆ·åï¼šroot  
+###å¯†ç ï¼šadmin  
+#ç™»é™†ç•Œé¢ï¼š  
+![image]()  
+#å­¦ç”Ÿç•Œé¢ï¼š  
+![image]()  
+#æ•™å¸ˆç•Œé¢ï¼š  
+![image]()  
+#ç®¡ç†å‘˜ç•Œé¢ï¼š  
+![image]()  
