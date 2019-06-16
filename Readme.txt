@@ -7,10 +7,10 @@
 ###用户名：root  
 ###密码：admin  
 #登陆界面：  
-![image]()  
+![image](https://raw.githubusercontent.com/yzqyfly/TestQuestionBankManSys/master/img/0.PNG)  
 #学生界面：  
-![image]()  
+![image](https://raw.githubusercontent.com/yzqyfly/TestQuestionBankManSys/master/img/1.PNG)  
 #教师界面：  
-![image]()  
+![image](https://raw.githubusercontent.com/yzqyfly/TestQuestionBankManSys/master/img/2.PNG)  
 #管理员界面：  
-![image]()  
+![image](https://raw.githubusercontent.com/yzqyfly/TestQuestionBankManSys/master/img/3.PNG)  
